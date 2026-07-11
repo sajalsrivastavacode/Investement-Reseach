@@ -1,6 +1,6 @@
-import { resolveTicker } from '@/lib/agent/tools';
-import { compileAgent } from '@/lib/agent/graph';
-import { AgentState } from '@/lib/agent/types';
+import { resolveTicker } from '../../../lib/agent/tools';
+import { compileAgent } from '../../../lib/agent/graph';
+import { AgentState } from '../../../lib/agent/types';
 
 export const maxDuration = 60; // Allow execution up to 60 seconds
 

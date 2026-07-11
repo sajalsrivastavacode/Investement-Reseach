@@ -11,7 +11,7 @@ import {
   AlertTriangle,
   FolderOpen
 } from 'lucide-react';
-import { AgentState, AgentStep } from '@/lib/agent/types';
+import { AgentState, AgentStep } from '../lib/agent/types';
 
 // Real-time projected wireframe 3D crystal shard (mathematical rotation, 0 dependencies, 0 disk space)
 function Dossier3DShard({ confidence = 85 }: { confidence?: number }) {

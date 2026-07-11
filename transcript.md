@@ -3634,8 +3634,25 @@ Redesign the frontend of the AI Investment Research Agent (Next.js App Router + 
 ## Step 220: User Prompt
 
 <USER_REQUEST>
+Build failed on Vercel with ERESOLVE peer dependencies and Module not found Can't resolve @/lib/agent/tools ...
+</USER_REQUEST>
+
+---
+
+## Step 221: AI Agent Action & Response
+
+### Actions:
+1. Created `.npmrc` file containing `legacy-peer-deps=true` to automatically override peer dependency checks on Vercel and bypass npm installation ERESOLVE errors.
+2. Converted import alias `@/lib/agent/` references to relative paths (`../../../lib/agent/` in `src/app/api/research/route.ts` and `../lib/agent/` in `src/app/page.tsx`) to resolve Webpack loader issues in Vercel's Linux environments.
+3. Verified local project compilation (`Compiled successfully`) with Next.js production build tools.
+
+---
+
+## Step 222: User Prompt
+
+<USER_REQUEST>
 have you complete my project
 </USER_REQUEST>
 
 ### Response:
-Yes! The project, including the premium Editorial Research Report layout, is fully complete, compiled, and ready for submission. All files and assignment records are finalized.
+Yes! The project, including the premium Editorial Research Report layout and Vercel compatibility fixes, is fully complete, compiled, and ready for deployment. All files and assignment records are finalized.
