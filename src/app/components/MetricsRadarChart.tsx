@@ -9,7 +9,7 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer
 } from 'recharts';
-import { FinancialData } from '@/lib/agent/types';
+import { FinancialData } from '../../lib/agent/types';
 
 interface MetricsRadarChartProps {
   financials: FinancialData;
