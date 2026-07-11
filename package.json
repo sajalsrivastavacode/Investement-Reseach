@@ -1,0 +1,40 @@
+{
+  "name": "ai-investment-research-agent",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.0",
+    "@langchain/core": "^0.3.0",
+    "@langchain/google-genai": "^0.1.0",
+    "@langchain/langgraph": "^0.2.0",
+    "@langchain/openai": "^0.4.0",
+    "@types/webxr": "^0.5.24",
+    "autoprefixer": "^10.5.2",
+    "canvas-confetti": "^1.9.3",
+    "dotenv": "^17.4.2",
+    "framer-motion": "^12.42.2",
+    "lucide-react": "^0.475.0",
+    "next": "^14.2.3",
+    "postcss": "^8.5.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-is": "^19.2.7",
+    "recharts": "^3.9.2",
+    "stock-nse-india": "^1.4.0",
+    "tailwindcss": "^3.4.19",
+    "yahoo-finance2": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.3.3"
+  }
+}

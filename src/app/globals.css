@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink-navy: #0C1220;
+  --ledger-surface: #121A2C;
+  --line: #2A3550;
+  --stamp-rose: #E14A5D;
+  --muted-rose: #8B3A45;
+  --steel-blue: #4C6E96;
+  --pale-blue: #A9C2DE;
+  --paper: #EDEAE3;
+  --text-muted: #7A879C;
+  --text-dim: #5A6B87;
+
+  --font-ibm-sans: 'IBM Plex Sans', sans-serif;
+  --font-ibm-mono: 'IBM Plex Mono', monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--ink-navy);
+    color: var(--paper);
+    font-family: var(--font-ibm-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-ibm-mono);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-ibm-mono);
+  }
+}
+
+/* Scrollbar styles for the Ledger theme */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink-navy);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--steel-blue);
+}
+
+/* Keyboard focus overrides */
+*:focus-visible {
+  outline: 2px solid var(--steel-blue) !important;
+  outline-offset: 2px !important;
+}
+
+/* Ambient Radial Background Glows */
+.ambient-glow-rose {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(225, 74, 93, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-navy {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(76, 110, 150, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 3D Interactive Rotating Wireframe Cube */
+.cube-container {
+  perspective: 400px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube-wrapper {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cubeRotation 15s infinite linear;
+}
+
+@keyframes cubeRotation {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+.cube-face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(76, 110, 150, 0.3);
+  background: rgba(18, 26, 44, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ibm-mono);
+  font-size: 7px;
+  color: var(--steel-blue);
+  user-select: none;
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0 0 10px rgba(76, 110, 150, 0.1);
+}
+
+.cube-face-front  { transform: rotateY(  0deg) translateZ(25px); }
+.cube-face-back   { transform: rotateY(180deg) translateZ(25px); border-color: rgba(225, 74, 93, 0.3); color: var(--stamp-rose); box-shadow: inset 0 0 10px rgba(225, 74, 93, 0.1); }
+.cube-face-right  { transform: rotateY( 90deg) translateZ(25px); }
+.cube-face-left   { transform: rotateY(-90deg) translateZ(25px); }
+.cube-face-top    { transform: rotateX( 90deg) translateZ(25px); }
+.cube-face-bottom { transform: rotateX(-90deg) translateZ(25px); }
